@@ -1,0 +1,22 @@
+The purpose of the package "BaseballStatCalc" is to allow the user to quickly and efficiently calculate key metrics for baseball players of various types
+from input count data.
+
+BaseballStatCalc consists of a main class "Player" that consists of the following input parameters: name, age, team. This class is then inherited by two
+player types in subpackages: "Offensive" and "Defensive". Each of these player types have their own input parameters.
+
+For Offensive players: atbats, hits, homeruns, doubles, triples, errors, fieldingattempts
+For Defensive players: inningspitched, strikeouts, walks
+
+The Offensive player type has two modules: batting.py and fielding.py. batting.py calculates the following metrics: battingaverage, onbasepercentage,
+sluggingpercentage. fielding.py calculates the following metrics: fieldingpercentage
+
+The Defensive player type has one module: pitching.py. pitching.py calculates the following metrics: EarnedRunAverage, WalksHitsPerInningsPitched,
+StrikeoutsPer9, WalksPer9.
+
+The Defensive class is then inherited by two types in subpackages: "Starter" and "Reliever". Each of these player types have the following input parameters.
+
+For Relievers: saves, holds, saveholdchances
+For Starters: gamesstarted
+
+Relievers contain a module called reliever.py, which contains the metric: convertedsaves. Starters contain a module called starter.py,
+which contains the metric: InningsPitchedperStart
