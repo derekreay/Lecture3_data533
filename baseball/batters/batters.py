@@ -1,9 +1,23 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[7]:
 
 
+class personnel:
+    def __init__(self, name, age, team, role, salary):
+        self.name = name
+        self.age = age
+        self.team = team
+        self.role = role
+        self.__salary = salary
+        
+    def display(self):
+        print("Name:", self.name, "Age:", self.age, "Team:", self.team, "Role:", self.role)
+        
+    def getSalary(self):
+        print("Salary:", self.__salary)
+        
 class batter(personnel):
     def __init__(self, name, age, team, role, salary, atbats, hits, doubles, triples, HR, walks):
         personnel.__init__(self, name, age, team, role, salary)
@@ -91,4 +105,39 @@ class batter(personnel):
                     outcome[i] = 4
         
         return outcome
+    
+    def count(self, x):
+        singles = 0
+        doubles = 0
+        triples = 0
+        homeruns = 0
+        hits = 0
+        for i in x:
+            if i == 1:
+                singles += 1
+                hits += 1
+            elif i == 2:
+                doubles += 1
+                hits += 1
+            elif i == 3:
+                triples += 1
+                hits += 1
+            elif i == 4:
+                homeruns +=1
+                hits += 1
+        print("In", len(x), "at bats:", singles, "singles,", doubles, "doubles,", triples, "triples,", homeruns, "homeruns, for", hits, "total hits")
+        y=[len(x), hits, doubles ,triples, homeruns]
+        return y
+
+
+# In[8]:
+
+
+
+
+
+# In[ ]:
+
+
+
 

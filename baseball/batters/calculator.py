@@ -1,23 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[ ]:
 
 
-class personnel:
-    def __init__(self, name, age, team, role, salary):
-        self.name = name
-        self.age = age
-        self.team = team
-        self.role = role
-        self.__salary = salary
-        
-    def display(self):
-        print("Name:", self.name, "Age:", self.age, "Team:", self.team, "Role:", self.role)
-        
-    def getSalary(self):
-        print("Salary:", self.__salary)
-        
 def batavg(atbats, hits):
     if atbats == 0:
         print("Cannot calculate batting average with no atbats")
@@ -45,6 +31,7 @@ def totalbase(hits, doubles, triples, HR):
         return (singles(hits, doubles, triples, HR)+ 2*doubles + 3*triples + 4*HR)
     except:
         pass
+       
     
 def krate(atbats, K):
     if atbats == 0:
@@ -77,10 +64,4 @@ def walkrate(atbats, walks):
         print("Cannot calculate walkrate with no plate appearances or walks")
     else:
         return walks/(walks+atbats)
-
-
-# In[ ]:
-
-
-
 
